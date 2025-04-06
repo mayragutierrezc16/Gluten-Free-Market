@@ -420,7 +420,7 @@ body {
     .carousel-slide {
         flex: 0 0 150px;
         max-width: 150px;
-        height: 120px;
+        height: 220px;
     }
 
     .carousel-slide h3 {
@@ -428,8 +428,8 @@ body {
     }
 
     .carousel-slide p {
-        font-size: 10px;
-        max-height: 80px;
+        font-size: 13px;
+        max-height: 100px;
     }
 
     .cta-slide button {
