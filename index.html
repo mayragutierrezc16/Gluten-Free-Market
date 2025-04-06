@@ -159,18 +159,19 @@
           </div>
           <div class="footer-newsletter">
             <h3>Suscribite</h3>
-            <form id="newsletter-form" action="subscribe.php" method="POST" class="newsletter-form">
+            <form id="newsletter-form" class="newsletter-form">
               <label for="email">Recibí novedades y promos especiales.</label>
               <input type="email" name="email" id="email" placeholder="Tu correo electrónico" required>
               <button type="submit">Suscribirse</button>
-            </form>  
-            <div id="subscribe-message" class="subscribe-message"></div>                  
+              <p id="success-message">¡Gracias por suscribirte! ✉️</p>
+            </form>
           </div>
-        </div>
         <div class="footer-bottom">
           <p>&copy; 2025 Gluten Free Shop. Todos los derechos reservados.</p>
         </div>
-      </footer>       
-  <script src="main.js"></script>
+      </footer>      
+      
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

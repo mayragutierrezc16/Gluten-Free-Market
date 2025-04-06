@@ -21,27 +21,27 @@ toggleBtn.addEventListener('click', () => {
 
   setInterval(moveToNextSlide, 4000);
 
-  const form = document.getElementById('newsletter-form');
-  const messageDiv = document.getElementById('subscribe-message');
-
-  form.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    
-    const formData = new FormData(form);
-    
-    const response = await fetch('subscribe.php', {
-      method: 'POST',
-      body: formData
+// Inicializa EmailJS
+(function(){
+    emailjs.init("b64dukZbjEqkEjnDT"); // Reemplazá con tu User ID de EmailJS
+  })();
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("newsletter-form");
+    const successMessage = document.getElementById("success-message");
+  
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_l0aagcd', 'template_s4acr5q', form)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          successMessage.style.display = "block";
+          form.reset();
+        }, function(error) {
+          console.error('FAILED...', error);
+          alert("Hubo un error al suscribirte. Por favor, intentá de nuevo.");
+        });
     });
-
-    const result = await response.text();
-
-    if (result.trim() === "success") {
-      messageDiv.textContent = "¡Gracias por suscribirte!";
-      messageDiv.style.color = "white";
-      form.reset();
-    } else {
-      messageDiv.textContent = "Hubo un error. Intentá nuevamente.";
-      messageDiv.style.color = "red";
-    }
   });
+  
