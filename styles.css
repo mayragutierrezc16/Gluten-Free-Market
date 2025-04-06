@@ -354,7 +354,7 @@ body {
 }
 
 .cta-slide button {
-    font-size: 15px;
+    font-size: 35px;
     padding: 0.8rem 1.5rem;
     background-color: white;
     color: #F25C05;
@@ -366,7 +366,8 @@ body {
 }
 
 .cta-slide button:hover {
-    background-color: #ffe5c1;
+    background-color: #F29F05;
+    color: white;
 }
 
 @media (max-width: 768px) {
