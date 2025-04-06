@@ -20,3 +20,28 @@ toggleBtn.addEventListener('click', () => {
   }
 
   setInterval(moveToNextSlide, 4000);
+
+  const form = document.getElementById('newsletter-form');
+  const messageDiv = document.getElementById('subscribe-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    
+    const response = await fetch('subscribe.php', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.text();
+
+    if (result.trim() === "success") {
+      messageDiv.textContent = "¡Gracias por suscribirte!";
+      messageDiv.style.color = "white";
+      form.reset();
+    } else {
+      messageDiv.textContent = "Hubo un error. Intentá nuevamente.";
+      messageDiv.style.color = "red";
+    }
+  });

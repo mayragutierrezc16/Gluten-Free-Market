@@ -9,7 +9,7 @@
 <body>
     <header class="navbar">
         <div class="container">
-          <div class="logo">Gluten Free Shop</div>
+          <div class="logo">Gluten Free Market</div>
           <nav class="nav-links" id="nav-links">
             <a href="#">Inicio</a>
             <a href="#">Productos</a>
@@ -140,7 +140,37 @@
             <button onclick="location.href='#productos'">Ver productos sin gluten</button>
           </div>
         </div>
-      </section>      
+      </section>     
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-footer">Gluten Free Market</div>
+            <p>Comé rico, viví sano. Alimentos libres de gluten para todos.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Secciones</h3>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Categorías</a></li>
+              <li><a href="#">Beneficios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Suscribite</h3>
+            <form id="newsletter-form" action="subscribe.php" method="POST" class="newsletter-form">
+              <label for="email">Recibí novedades y promos especiales.</label>
+              <input type="email" name="email" id="email" placeholder="Tu correo electrónico" required>
+              <button type="submit">Suscribirse</button>
+            </form>  
+            <div id="subscribe-message" class="subscribe-message"></div>                  
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Gluten Free Shop. Todos los derechos reservados.</p>
+        </div>
+      </footer>       
   <script src="main.js"></script>
 </body>
 </html>
