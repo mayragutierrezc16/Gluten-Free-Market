@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gluten Free Shop</title>
+  <link rel="stylesheet" href="productos.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+          <div class="logo"><a href="index.html">Gluten Free Market</a></div>
+          <nav class="nav-links" id="nav-links">
+            <a id="pestaña" href="productos.html">Productos</a>
+            <a href="#">Recetas</a>
+            <a href="#">Contacto</a>
+          </nav>
+          <div class="icons">
+            <button class="cart-btn"><img src="cart.svg"></button>
+            <button class="menu-toggle" id="menu-toggle"><img src="menu.svg"></button>
+          </div>
+        </div>
+      </header>
+      <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo-footer"><a href="index.html">Gluten Free Market</a></div>
+            <p>Comé rico, viví sano. Alimentos libres de gluten para todos.</p>
+          </div>
+          <div class="footer-links">
+            <h3>Secciones</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="#">Categorías</a></li>
+              <li><a href="#">Beneficios</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Suscribite</h3>
+            <form id="newsletter-form" class="newsletter-form">
+              <label for="email">Recibí novedades y promos especiales.</label>
+              <input type="email" name="email" id="email" placeholder="Tu correo electrónico" required>
+              <button type="submit">Suscribirse</button>
+              <p id="success-message">¡Gracias por suscribirte! ✉️</p>
+            </form>
+          </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Gluten Free Shop. Todos los derechos reservados.</p>
+        </div>
+      </footer>      
+      
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="productos.js"></script>
+      </body>
+</html>
