@@ -400,4 +400,32 @@ body {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  #carrito-icono {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #D93D04;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
   
+  #carrito-icono:hover {
+    background-color: #F29F05;
+  }
+  
+  #carrito-contador {
+    background-color: white;
+    color: #D93D04;
+    border-radius: 50%;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    min-width: 24px;
+    text-align: center;
+  }
